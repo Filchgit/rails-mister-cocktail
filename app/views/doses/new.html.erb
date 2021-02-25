@@ -10,3 +10,9 @@
 <ul>
 <!-- list each each ingredient in doses that correspons to this cocktail id -->
 </ul>
+
+<%= simple_form_for @dose do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient  %>
+  <%= f.button :submit %>
+<% end %>
