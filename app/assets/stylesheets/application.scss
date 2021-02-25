@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+//have to hand import pages here for urls we made
+@import "cocktails";
+@import "doses";
+
