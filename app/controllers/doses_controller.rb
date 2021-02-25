@@ -9,4 +9,15 @@ class DosesController < ApplicationController
 
   def edit
   end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_dose
+    @dose = Dose.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def dose_params
+    params.require(:dose).permit(:description)
+  end
 end
