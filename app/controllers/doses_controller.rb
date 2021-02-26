@@ -7,12 +7,7 @@ class DosesController < ApplicationController
   end
 
   def create 
-    # # dammit do I have access to cocktail here
-    # @dose = Dose.new(dose_params)
-    # @dose.save
-    # redirect_to new_cocktail_dose_path(@dose.cocktail_id)
-    # #new_cocktail_dose GET    /cocktails/:cocktail_id/doses/new(.:format)                                                       doses#new
-    
+  
     @cocktail = Cocktail.find(params[:cocktail_id])
   
     @dose = Dose.new(dose_params)

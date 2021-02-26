@@ -3,17 +3,20 @@
   <h1 class="title">Cocktails#index</h1>
   <p>Find me in app/views/cocktails/index.html.erb</p>
 
-  
+ <p>Note for me I really think I will go back to having a plain list of cocktails on this page </p> 
+ <p>This page should have some filters for type of cocktail ingredients</p>
+ <p>and also a RANDOM function</p>
+ 
 <%= link_to 'New Cocktail', cocktails_new_path %>
 </div>
 
 
-<div class="container">
+<div class="cards">
   <div class= "row">
     <% @cocktails.each do |cocktail| %>
     <div class="card col-4 p-5 m-2" style="width: 15rem;">
        <%= link_to cocktail_path(cocktail) do %>
-      <div class="card-body">
+        <div class="card-body">
         <h5 class="card-title"> <%= cocktail.name %></h5>
         <% end %>
       </div>
