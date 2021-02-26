@@ -1,2 +1,13 @@
 <h1>Cocktails#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p>
+
+
+<h2> <%= @cocktail.name %></h2>
+    <%  ingredient_array = [] %>
+    <%  ingredient_array = Dose.select {|ingred| ingred.cocktail_id == 2  } %> 
+    <%  ingredient_array.each do |dose |  %>
+    <%= dose.description %>
+    <%  this_ingredient = Ingredient.find(dose.ingredient_id)  %>
+    <%= this_ingredient.name  %>
+    <% end  %>
+     

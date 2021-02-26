@@ -7,7 +7,11 @@
 <%= @cocktail.name %>
 
 <h4>  Current Recipe </h4>
+
+ <h5> Add Ingredient </h5>
 <ul>
-<!-- list each each ingredient in doses that correspons to this cocktail id -->
+<!-- list each each ingredient in doses that corresponds to this cocktail id -->
 </ul>
 
+<%= link_to 'Back', cocktails_path %>
+<%= render 'form', dose: @dose %>

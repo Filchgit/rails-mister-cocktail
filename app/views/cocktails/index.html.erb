@@ -7,3 +7,17 @@
 <%= link_to 'New Cocktail', cocktails_new_path %>
 </div>
 
+
+<div class="container">
+  <div class= "row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card col-4 p-5 m-2" style="width: 15rem;">
+       <%= link_to cocktail_path(cocktail) do %>
+      <div class="card-body">
+        <h5 class="card-title"> <%= cocktail.name %></h5>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>d
